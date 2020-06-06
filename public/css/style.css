@@ -1,0 +1,28 @@
+/* img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 100%;
+  } */
+
+/* img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+} */
+
+img { 
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: block;
+    max-width:100%; 
+    height:auto; 
+    object-fit: contain;
+
+}  
+.container {
+    width: auto;
+    max-width: auto;
+    padding: 0 15px;
+  }
