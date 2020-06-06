@@ -28,7 +28,7 @@ weatherForm.addEventListener('submit',(e) => {
                 return
             }
             // console.log(data);
-            messageThree.textContent = "Location " +data[0].location
+            messageThree.textContent = "Location " +data[0].location + ", " + data[0].country
             messageOne.textContent = "Current Temperature " + data[0].temperature
             messageTwo.textContent = "Feels like " + data[0].feelslike
         })
@@ -49,12 +49,12 @@ buttonEvent.addEventListener('click',(e) => {
     fetch(`/weather?address=${location}`).then((response) => {
         response.json().then((data) => {
             if(data.error) {
-                console.log(data);
+                // console.log(data);
                 messageOne.textContent = data.error.info
                 return
             }
-            console.log(data);
-            messageThree.textContent = "Location " +data[0].location
+            // console.log(data);
+            messageThree.textContent = "Location " +data[0].location + ", " + data[0].country
             messageOne.textContent = "Current Temperature " + data[0].temperature
             messageTwo.textContent = "Feels like " + data[0].feelslike
         })

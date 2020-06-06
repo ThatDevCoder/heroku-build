@@ -9,8 +9,11 @@ forecast = (latitude,longitude,callback) => {
         } else if(body.error){
             callback('You have entered a wrong place')
         } else {
+            // console.log(body);
+            
             callback(undefined,{
                 location: body.location.name,
+                country : body.location.country,
                 temperature : body.current.temperature,
                 feelslike : body.current.feelslike
             })

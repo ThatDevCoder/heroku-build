@@ -59,8 +59,10 @@ app.get('/weather', (req,res) => {
                 if(error){
                     return res.send({error})
                 } else {
+                    // console.log(data);
                     res.send([{
                         location: data.location,
+                        country: data.country,
                         temperature: data.temperature,
                         feelslike:data.feelslike
                 }])
