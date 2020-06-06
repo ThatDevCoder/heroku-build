@@ -20,7 +20,7 @@ weatherForm.addEventListener('submit',(e) => {
     messageTwo.textContent = ''
     messageThree.textContent = ''
 
-    fetch(`http://api.weatherstack.com/current?access_key=e598625c82eef882e22cc8a3fe24526d&query=${location}`).then((response) => {
+    fetch(`/weather?address=${location}`).then((response) => {
         response.json().then((data) => {
             if(data.error) {
                 // console.log(data);
@@ -28,9 +28,9 @@ weatherForm.addEventListener('submit',(e) => {
                 return
             }
             // console.log(data);
-            messageThree.textContent = data.location.name + ", " + data.location.country
-            messageOne.textContent = "Current Temperature " + data.current.temperature
-            messageTwo.textContent = "Feels like " + data.current.feelslike
+            messageThree.textContent = "Location " +data[0].location
+            messageOne.textContent = "Current Temperature " + data[0].temperature
+            messageTwo.textContent = "Feels like " + data[0].feelslike
         })
     })
 
@@ -46,17 +46,17 @@ buttonEvent.addEventListener('click',(e) => {
     messageTwo.textContent = ''
     messageThree.textContent = ''
 
-    fetch(`http://api.weatherstack.com/current?access_key=e598625c82eef882e22cc8a3fe24526d&query=${location}`).then((response) => {
+    fetch(`/weather?address=${location}`).then((response) => {
         response.json().then((data) => {
             if(data.error) {
-                // console.log(data);
+                console.log(data);
                 messageOne.textContent = data.error.info
                 return
             }
-            // console.log(data);
-            messageThree.textContent = data.location.name + ", " + data.location.country
-            messageOne.textContent = "Current Temperature " + data.current.temperature
-            messageTwo.textContent = "Feels like " + data.current.feelslike
+            console.log(data);
+            messageThree.textContent = "Location " +data[0].location
+            messageOne.textContent = "Current Temperature " + data[0].temperature
+            messageTwo.textContent = "Feels like " + data[0].feelslike
         })
     })
 
