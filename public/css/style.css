@@ -26,3 +26,17 @@ img {
     max-width: auto;
     padding: 0 15px;
   }
+
+.about-me-h1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.help-me {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
