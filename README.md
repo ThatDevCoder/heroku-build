@@ -1,4 +1,4 @@
-# Your Today Weather App
+# Today's Weather App
 A web application serving what is the weather today.
 
 ## Getting started
