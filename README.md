@@ -22,5 +22,8 @@ If you prefer to run the application locally,
 - VS Code
 - Bootstrap
 
+## Known Issue
+* The website when run on phone malfunctions as it is not able to expand the dropdown menu. Which contains about me, help pages.
+
 ## Acknowledgments
 * Creators and maintainers of WeatherStack API, MapBox API
