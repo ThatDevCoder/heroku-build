@@ -1,7 +1,9 @@
 const request = require('request');
+require('dotenv').config()
 
 const geocode = (add,callback) => {
-    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${add}.json?access_token=pk.eyJ1Ijoic3Vja2luYXRvciIsImEiOiJja2Iwb200d3EwYTBiMnZzOWNnaHVraTZsIn0.8Bd-NsvZrM_9zj7gqyMT0A`
+    const API_KEY = process.env.GEOCODE_API_KEY
+    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${add}.json?access_token=${API_KEY}`
     request({url,json:true}, (error,{body}) => {
         if(error) {
             callback('Unable to connect to internet')
