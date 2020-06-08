@@ -10,6 +10,7 @@ If you prefer to run the application locally,
 2. `git clone https://github.com/ThatDevCoder/heroku-build.git`
 3. `npm install` to install all the dependencies.
 4. `npm run dev`
+5. Pull up your browser and go to url `http://localhost:3000/`
 
 ## How to set up .env
 1. First rename the file `.env_example` to `.env`
