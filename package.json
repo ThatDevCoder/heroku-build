@@ -8,7 +8,7 @@
     "dev": "nodemon src/app.js -e js,hbs,css"
   },
   "keywords": [],
-  "author": "",
+  "author": "Devyash Bordia",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
