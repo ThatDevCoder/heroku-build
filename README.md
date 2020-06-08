@@ -11,6 +11,10 @@ If you prefer to run the application locally,
 3. `npm install` to install all the dependencies.
 4. `npm run dev`
 
+## How to set up .env
+1. First rename the file `.env_example` to `.env`
+2. Put your API keys in there between the single quotes `''` and you are Done!
+
 ## Technologies used
 - Frontend Design: Bootstrap + CSS
 - Backend Scripting: Node.js
